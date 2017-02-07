@@ -1,7 +1,7 @@
 $(document).ready(function() {
   
-  var beginDate = "19920903";
-  var endDate = "19920904";
+  var beginDate = "20080903";
+  var endDate = "20080904";
 
   var url = "https://api.nytimes.com/svc/search/v2/articlesearch.json";
   var articles = [];
@@ -26,7 +26,7 @@ $(document).ready(function() {
         pictureSrc = "nyt-logo.png";
       }
       else {
-        pictureSrc = article['multimedia'][0];
+        pictureSrc = 'http://www.nytimes.com/' + article['multimedia'][0]['url'];
       }
       articleContent += "<div class='media'><div class='media-left'><a href='#'><img class='media-object' src='" + pictureSrc + "' height='50px'></a></div><div class='media-body'><h4 class='media-heading'>" + headline + "</h4>" + snippet + " <a href=''>View More</a></div></div>";
       

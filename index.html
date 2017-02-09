@@ -5,17 +5,25 @@
     <link rel="stylesheet" href="main.css">
   </head>
   <body style="background-image:url(https://wallpaperscraft.com/image/paper_dents_texture_76553_3840x2160.jpg)">
-    <div class="navbar navbar-default" style="margin-bottom: 0">
-        <div class="navbar-brand">New York Times</div>
+    <div class="navbar navbar-default" style="margin-bottom: 0; background-color:antiquewhite">
+        <div class="navbar-brand">What Happened that day?</div>
+       
     </div>
       <div class="col-sm-2">
           
-      </div>
+          <form onsubmit="submitFunction" class="form-horizontal" style="margin:1em;">
+              <div class="form-group">
+                  <label for="date">Date</label>
+                  <input type="date" class="form-control" id="date"/>
+              </div>
+              <button type="button" id="submitbutton" class="btn btn-primary">Submit</button>
+                
+          </form>
+      </div>     
       <div class="container col-sm-10" style="margin-top:1em;">
           <div id="articles"></div>
       </div>
       <!-- Large modal -->
-      <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-lg">Large modal</button>
 
       <div style="height:500px" id="myModal" class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myModal">
           <div class="modal-dialog modal-lg" role="document">
